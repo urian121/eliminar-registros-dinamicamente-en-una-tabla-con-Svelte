@@ -5,14 +5,19 @@
   import { onMount } from "svelte";
   let personas = [];
 
-  // Cargar los datos al montar el componente
   onMount(async () => {
-    const response = await fetch("/data.json"); // Asumiendo que el archivo .json está en la raíz pública
+    // Realiza una solicitud para obtener los datos del archivo JSON ubicado en la raíz pública
+    const response = await fetch("/data.json");
+
+    // Convierte la respuesta en formato JSON y asigna los datos al arreglo 'personas'
     personas = await response.json();
   });
 
   function eliminarRegistro(idPersona) {
-    console.log("Eliminar registro", idPersona);
+    // Imprime el ID de la persona que se va a eliminar (para fines de depuración)
+    console.log("Eliminar registro con ID:", idPersona);
+
+    // Filtra el arreglo 'personas' para eliminar el registro con el ID correspondiente
     personas = personas.filter((persona) => persona.id !== idPersona);
   }
 </script>
@@ -21,7 +26,7 @@
   <div class="row">
     <div class="col">
       <h1 class="text-center fw-bold mb-5">
-       Eliminar Registros Dinámicamente en una Tabla con Svelte <hr />
+        Eliminar Registros Dinámicamente en una Tabla con Svelte <hr />
       </h1>
 
       <div class="table-responsive">
