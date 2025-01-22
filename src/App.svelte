@@ -21,7 +21,7 @@
   <div class="row">
     <div class="col">
       <h1 class="text-center fw-bold mb-5">
-        Eliminar registro de una tabla con svelte <hr />
+       Eliminar Registros Dinámicamente en una Tabla con Svelte <hr />
       </h1>
 
       <div class="table-responsive">

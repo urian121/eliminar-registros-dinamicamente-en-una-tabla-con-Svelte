@@ -1,4 +1,4 @@
-# Eliminar Registro de Tabla con Svelte
+# Eliminar Registros Dinámicamente en una Tabla con Svelte
 
 Este proyecto es un ejemplo simple de cómo eliminar registros de una tabla utilizando el framework Svelte. La tabla muestra una lista de personas y permite eliminar un registro al hacer clic en el ícono de la papelera.
 
