@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "bootstrap-icons": "^1.11.3"
+    "bootstrap-icons": "^1.11.3",
+    "nextjs-toast-notify": "^1.28.0"
   }
 }

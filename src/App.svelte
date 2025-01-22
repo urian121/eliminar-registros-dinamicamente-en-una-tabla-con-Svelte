@@ -2,6 +2,10 @@
   import "bootstrap/dist/css/bootstrap.min.css";
   import "bootstrap-icons/font/bootstrap-icons.css";
 
+  // Para generar alertas emergentes
+  import { toast } from "nextjs-toast-notify";
+  import "nextjs-toast-notify/dist/nextjs-toast-notify.css";
+
   import { onMount } from "svelte";
   let personas = [];
 
@@ -19,6 +23,16 @@
 
     // Filtra el arreglo 'personas' para eliminar el registro con el ID correspondiente
     personas = personas.filter((persona) => persona.id !== idPersona);
+
+
+    // Muestra una alerta emergente para indicar que la operación se realizó con éxito
+     toast.success("¡La persona ha sido eliminada con éxito!", {
+      duration: 5000,
+      progress: true,
+      position: "top-center",
+      transition: "swingInverted",
+      sonido: true,
+    });
   }
 </script>
 
